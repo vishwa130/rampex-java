@@ -1,8 +1,6 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-// User class
 class User {
     private int id;
     private String name;
@@ -39,7 +37,7 @@ class User {
     }
 }
 
-// Course class
+
 class Course {
     private int courseId;
     private String courseName;
@@ -71,7 +69,7 @@ class Course {
     }
 }
 
-// Main class
+
 public class OnlineLearningPlatform {
 
     static ArrayList<User> users = new ArrayList<>();
@@ -81,10 +79,10 @@ public class OnlineLearningPlatform {
 
     public static void main(String[] args) {
 
-        // Sample users
+        
         users.add(new User(1, "Vishwa", "vishwa@gmail.com", "1234"));
 
-        // Sample courses
+        
         courses.add(new Course(101, "Java Programming", "John", 49.99));
         courses.add(new Course(102, "Python Programming", "David", 39.99));
         courses.add(new Course(103, "Web Development", "Alex", 59.99));
@@ -136,7 +134,7 @@ public class OnlineLearningPlatform {
         scanner.close();
     }
 
-    // Register new user
+    
     public static void registerUser() {
 
         System.out.println("\n--- User Registration ---");
@@ -160,7 +158,7 @@ public class OnlineLearningPlatform {
         System.out.println("Registration successful!");
     }
 
-    // Login user
+    
     public static void loginUser() {
 
         System.out.println("\n--- User Login ---");
@@ -189,7 +187,7 @@ public class OnlineLearningPlatform {
         }
     }
 
-    // Display all courses
+    
     public static void viewCourses() {
 
         System.out.println("\n--- Available Courses ---");
@@ -204,7 +202,7 @@ public class OnlineLearningPlatform {
         }
     }
 
-    // Add new course
+    
     public static void addCourse() {
 
         System.out.println("\n--- Add New Course ---");
