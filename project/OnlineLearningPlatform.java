@@ -214,6 +214,7 @@ public class OnlineLearningPlatform {
         System.out.print("Enter Course Name: ");
         String courseName = scanner.nextLine();
 
+
         System.out.print("Enter Instructor Name: ");
         String instructor = scanner.nextLine();
 
