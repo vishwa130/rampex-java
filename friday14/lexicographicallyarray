@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Main {
+
+    static void makeSmallest(int[] a, int k) {
+        int n = a.length;
+
+        for (int i = 0; i < n && k > 0; i++) {
+
+            int minIndex = i;
+
+            int end = Math.min(n - 1, i + k);
+
+            for (int j = i + 1; j <= end; j++) {
+                if (a[j] < a[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            if (minIndex != i) {
+                int temp = a[i];
+                a[i] = a[minIndex];
+                a[minIndex] = temp;
+            }
+
+            // Only one swap is allowed
+            break;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        int[] a = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        makeSmallest(a, k);
+
+        for (int x : a) {
+            System.out.print(x + " ");
+        }
+    }
+}
